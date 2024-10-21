@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.filters {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-btn:hover {
+    background-color: #0056b3;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    display: block;
+    width: 300px;
+    height: 200px;
+}
+/* Stylish Heading */
+.gallery-heading {
+    text-align: center;
+    font-size: 3rem; /* Large, bold font */
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase; /* Make text uppercase */
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+   
+    color: transparent;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.gallery-heading .highlight {
+    background: transparent;
+    display: inline-block;
+    padding: 0 10px;
+    position: relative;
+    background-image: linear-gradient(to right, #ff0080, #ff8c00);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.gallery-heading::before,
+.gallery-heading::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background-color: #00ffcc;
+    top: 30%;
+    transform: translateY(-50%);
+}
+
+.gallery-heading::before {
+    left: -60px;
+}
+
+.gallery-heading::after {
+    right: -60px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Ensures any content within is centered */
+    padding: 10px;
+}
